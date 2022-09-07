@@ -193,6 +193,7 @@ from (select account, "currencyId", tag, (after - before - xcm - homa - cex) as 
       from account_trace_info
       where account in (select account from traced_accounts)) t
 where gained_used <> 0
+order by account
 ;
 
 -- from user to kucoin

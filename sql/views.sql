@@ -98,7 +98,7 @@ select "currencyId"
 from account_balance
          join block b on account_balance."blockHash" = b.hash
          join currency c on account_balance."currencyId" = c.id
-where height = 1694499
+where height = 1809599
 group by "currencyId"
        , c.decimals
        , account

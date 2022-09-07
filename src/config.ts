@@ -161,7 +161,7 @@ export const parachainAddresses = {
 }
 
 export const startBlock = 1638215
-export const endBlock = 1694500
+export const endBlock = 1809600
 export const pausedBlock = 1639493
 
 export const cexAddresses = [

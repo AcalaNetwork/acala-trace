@@ -49,6 +49,7 @@ export const queryEvents = async (fromBlock: number, toBlock: number) => {
   const query = gql`
     query q($fromBlock: Int, $toBlock: Int) {
       events(
+        limit: 14000
         where: {
           block: { height_gte: $fromBlock, height_lt: $toBlock }
           call: { success_eq: true }
@@ -78,6 +79,7 @@ export const queryEvents = async (fromBlock: number, toBlock: number) => {
   const query2 = gql`
     query q($fromBlock: Int, $toBlock: Int) {
       events(
+        limit: 14000
         where: {
           block: { height_gte: $fromBlock, height_lt: $toBlock }
           call_isNull: true
@@ -135,6 +137,7 @@ export const queryLoansEvents = async (fromBlock: number, toBlock: number) => {
   const query = gql`
     query q($fromBlock: Int, $toBlock: Int) {
       events(
+        limit: 14000
         where: {
           block: { height_gte: $fromBlock, height_lt: $toBlock }
           call: { success_eq: true }
@@ -163,6 +166,7 @@ export const queryLoansEvents = async (fromBlock: number, toBlock: number) => {
   const query2 = gql`
     query q($fromBlock: Int, $toBlock: Int) {
       events(
+        limit: 14000
         where: {
           block: { height_gte: $fromBlock, height_lt: $toBlock }
           call_isNull: true
@@ -214,7 +218,7 @@ export const queryLoansEvents = async (fromBlock: number, toBlock: number) => {
 export const queryFullEvents = async (fromBlock: number, toBlock: number) => {
   const query = gql`
     query q($fromBlock: Int, $toBlock: Int) {
-      events(where: { block: { height_gte: $fromBlock, height_lt: $toBlock } }) {
+      events(limit: 14000, where: { block: { height_gte: $fromBlock, height_lt: $toBlock } }) {
         extrinsic {
           hash
         }
