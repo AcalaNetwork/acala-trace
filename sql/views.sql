@@ -188,7 +188,7 @@ from (select account
             , 0            as homa
             , 0            as cex
        from account_balance
-       where "blockHash" = '0x30af7c6ff262a0e640a14a92110906474c7fb071485ea94622f1aa7cbcc75193'
+       where "blockHash" = '0x12d4cae1489d453be82a459588c2e688fc49a1e6187e27e3881bac854d1c1349'
        group by "currencyId"
               , tag
               , account)
